@@ -809,8 +809,7 @@ exampro/
 ### Connect With the Team
 
 [![LinkedIn - Sayandip](https://img.shields.io/badge/LinkedIn-Sayandip%20Saha-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sayandip-saha-523ab430b/)
-[![LinkedIn - Sristinil](https://img.shields.io/badge/LinkedIn-Sayandip%20Saha-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sristinil-biswas/)
-[![GitHub](https://img.shields.io/badge/GitHub-ExamPro-100000?style=for-the-badge&logo=github)](https://github.com/yourusername/exampro)
+[![LinkedIn - Sristinil](https://img.shields.io/badge/LinkedIn-Sristinil%20Biswas-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sristinil-biswas/)
 
 ### Found a Bug?
 
@@ -827,8 +826,6 @@ exampro/
 ### ⭐ If you found this project helpful, please consider starring the repository!
 
 **Made with ❤️ by Sayandip Saha & Sristinil Biswas**
-
-*Final Year Project | St. Thomas' College of Engineering and Technology*
 
 *Last Updated: February 2026 | Version 1.0.0 (Phase 1)*
 
