@@ -809,7 +809,7 @@ exampro/
 ### Connect With the Team
 
 [![LinkedIn - Sayandip](https://img.shields.io/badge/LinkedIn-Sayandip%20Saha-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sayandip-saha-523ab430b/)
-[![LinkedIn - Sristinil](https://img.shields.io/badge/LinkedIn-Sristinil%20Biswas-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sristinil-biswas/)
+[![LinkedIn - Sristinil](https://img.shields.io/badge/LinkedIn-Sayandip%20Saha-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sristinil-biswas/)
 [![GitHub](https://img.shields.io/badge/GitHub-ExamPro-100000?style=for-the-badge&logo=github)](https://github.com/yourusername/exampro)
 
 ### Found a Bug?
