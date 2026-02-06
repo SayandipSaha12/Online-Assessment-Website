@@ -802,29 +802,7 @@ exampro/
 </tr>
 </table>
 
-### 🙏 Acknowledgments
 
-- **Claude (Anthropic AI)** - Technical guidance and code assistance
-- **Spring Boot Community** - Documentation and tutorials
-- **Stack Overflow** - Problem-solving support
-- **St. Thomas' College** - Academic guidance
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-```
-MIT License - Summary
-✅ Commercial use allowed
-✅ Modification allowed
-✅ Distribution allowed
-✅ Private use allowed
-⚠️ No warranty provided
-⚠️ License must be included
-```
-
----
 
 ## 📞 Contact & Support
 
@@ -835,8 +813,6 @@ MIT License - Summary
 [![GitHub](https://img.shields.io/badge/GitHub-ExamPro-100000?style=for-the-badge&logo=github)](https://github.com/yourusername/exampro)
 
 ### Found a Bug?
-
-[Report Issue](https://github.com/yourusername/exampro/issues/new) • [Request Feature](https://github.com/yourusername/exampro/issues/new?labels=enhancement)
 
 ---
 
