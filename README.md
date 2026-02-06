@@ -274,7 +274,7 @@ http://localhost:5500
 ## 👨‍💻 Developer  
 
 - Sayandip Saha - 4th Year IT (St. Thomas' College of Engineering and Technology) (https://www.linkedin.com/in/sayandip-saha-523ab430b/)
--Sristinil Biswas - 4th Year IT (St. Thomas' College of Engineering and Technology) (https://www.linkedin.com/in/sristinil-biswas/)
+- Sristinil Biswas - 4th Year IT (St. Thomas' College of Engineering and Technology) (https://www.linkedin.com/in/sristinil-biswas/)
 
 ---
 
