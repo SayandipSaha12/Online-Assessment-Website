@@ -1,5 +1,5 @@
 # 📚 ExamPro - Online Assessment Platform
-*(Final Year Project)*
+*(Full Stack Web Development Project)*
 
 <div align="center">
 
