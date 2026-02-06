@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Assessment - ExamPro</title>
+    <link rel="stylesheet" href="take-assessment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <i class="fas fa-graduation-cap"></i>
+            <span>ExamPro</span>
+        </div>
+        <div class="nav-title">
+            <h2 id="test-title">Loading Test...</h2>
+        </div>
+        <div class="nav-right">
+            <div class="timer-container" id="timer-container" style="display: none;">
+                <i class="fas fa-clock"></i>
+                <span id="timer">00:00</span>
+            </div>
+            <div class="user-info" id="user-info" style="display: none;">
+                <i class="fas fa-user-circle"></i>
+                <span id="user-name">Guest</span>
+            </div>
+            <button class="btn-logout" id="btn-logout" onclick="handleLogout()" style="display: none;">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <div class="main-container" id="main-container">
+        
+        <!-- Enter Test Code Section -->
+        <section class="enter-code-section" id="enter-code-section">
+            <div class="code-card">
+                <div class="code-icon">
+                    <i class="fas fa-keyboard"></i>
+                </div>
+                <h2>Enter Test Code</h2>
+                <p>Enter the code provided by your instructor to access the test</p>
+                
+                <form id="codeForm" onsubmit="loadTest(event)">
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="test-code-input" 
+                            placeholder="e.g., ABC12XYZ" 
+                            maxlength="8"
+                            required
+                            autocomplete="off">
+                    </div>
+                    
+                    <button type="submit" class="btn-start">
+                        <i class="fas fa-play-circle"></i> Start Test
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Student Info Section -->
+        <section class="student-info-section" id="student-info-section" style="display: none;">
+            <div class="info-card">
+                <h2>Before You Begin</h2>
+                <div class="test-details" id="test-details"></div>
+                
+                <form id="studentInfoForm" onsubmit="startTest(event)">
+                    <div class="form-group">
+                        <label for="student-name">Your Name *</label>
+                        <input type="text" id="student-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-email">Your Email *</label>
+                        <input type="email" id="student-email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="rules-box">
+                        <h4><i class="fas fa-exclamation-circle"></i> Instructions</h4>
+                        <ul>
+                            <li>Answer all questions to the best of your ability</li>
+                            <li>You cannot pause the timer once started</li>
+                            <li>Submit before time runs out to save your answers</li>
+                            <li>You can review and change answers before submitting</li>
+                        </ul>
+                    </div>
+                    
+                    <button type="submit" class="btn-begin">
+                        <i class="fas fa-rocket"></i> Begin Test
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Test Section -->
+        <section class="test-section" id="test-section" style="display: none;">
+            <div class="test-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                
+                <div class="question-counter">
+                    Question <span id="current-question">1</span> of <span id="total-questions">0</span>
+                </div>
+
+                <div id="questions-container"></div>
+
+                <div class="navigation-buttons">
+                    <button class="btn-nav btn-previous" id="btn-previous" onclick="previousQuestion()" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn-nav btn-next" id="btn-next" onclick="nextQuestion()">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-submit-test" id="btn-submit" onclick="submitTest()" style="display: none;">
+                        <i class="fas fa-check-circle"></i> Submit Test
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="results-section" style="display: none;">
+            <div class="results-container">
+                <div class="score-card">
+                    <div class="score-icon" id="score-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h2>Test Completed!</h2>
+                    <div class="score-display">
+                        <span class="score-number" id="score-display">0</span>
+                        <span class="score-total">/ <span id="total-score">0</span></span>
+                    </div>
+                    <div class="percentage" id="percentage-display">0%</div>
+                    
+                    <div class="score-message" id="score-message"></div>
+                </div>
+
+                <div class="answers-review">
+                    <h3><i class="fas fa-list-check"></i> Answer Review</h3>
+                    <div id="answers-container"></div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn-secondary" onclick="window.location.href='home-logged-in.html'">
+                        <i class="fas fa-home"></i> Go to Home
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="take-assessment.js"></script>
+</body>
+</html>

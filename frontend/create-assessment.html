@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Assessment - ExamPro</title>
+    <link rel="stylesheet" href="create-assessment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ExamPro</span>
+            </div>
+            <div class="nav-title">
+                <h2>Create Assessment</h2>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i> Home
+                </button>
+                <button class="btn-logout" onclick="handleLogout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Test Details Section -->
+        <section class="test-details-section">
+            <div class="section-card">
+                <h3><i class="fas fa-info-circle"></i> Test Details</h3>
+                <form id="testDetailsForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="test-title">Test Title *</label>
+                            <input type="text" id="test-title" placeholder="e.g., Mathematics Quiz - Chapter 5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="test-duration">Duration (minutes) *</label>
+                            <input type="number" id="test-duration" placeholder="e.g., 30" min="1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="test-date">Activation Date *</label>
+                            <input type="date" id="test-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="test-time">Activation Time *</label>
+                            <input type="time" id="test-time" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="test-description">Description (Optional)</label>
+                        <textarea id="test-description" rows="3" placeholder="Add instructions or description for the test..."></textarea>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Questions Section -->
+        <section class="questions-section">
+            <div class="section-card">
+                <div class="section-header">
+                    <h3><i class="fas fa-question-circle"></i> Questions (<span id="question-count">0</span>)</h3>
+                    <button class="btn-add-question" onclick="openQuestionModal()">
+                        <i class="fas fa-plus"></i> Add Question
+                    </button>
+                </div>
+
+                <div id="questions-list" class="questions-list">
+                    <div class="empty-state">
+                        <i class="fas fa-clipboard-question"></i>
+                        <p>No questions added yet</p>
+                        <p class="empty-subtitle">Click "Add Question" to create your first question</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn-preview" onclick="previewTest()">
+                <i class="fas fa-eye"></i> Preview Test
+            </button>
+            <button class="btn-save-draft" onclick="saveDraft()">
+                <i class="fas fa-save"></i> Save as Draft
+            </button>
+            <button class="btn-create" onclick="createTest()">
+                <i class="fas fa-check-circle"></i> Create Test
+            </button>
+        </div>
+    </div>
+
+    <!-- Add Question Modal -->
+    <div id="questionModal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2><i class="fas fa-edit"></i> <span id="modal-title">Add Question</span></h2>
+                <span class="close" onclick="closeQuestionModal()">&times;</span>
+            </div>
+
+            <form id="questionForm" class="question-form">
+                <div class="form-group">
+                    <label for="question-text">Question *</label>
+                    <textarea id="question-text" rows="3" placeholder="Enter your question here..." required></textarea>
+                </div>
+
+                <div class="options-container">
+                    <label>Options *</label>
+                    <div class="option-group">
+                        <div class="option-item">
+                            <input type="radio" name="correct-answer" value="0" id="correct-0" required>
+                            <input type="text" id="option-0" placeholder="Option A" required>
+                            <label for="correct-0" class="correct-label">
+                                <i class="fas fa-check-circle"></i> Correct
+                            </label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="correct-answer" value="1" id="correct-1">
+                            <input type="text" id="option-1" placeholder="Option B" required>
+                            <label for="correct-1" class="correct-label">
+                                <i class="fas fa-check-circle"></i> Correct
+                            </label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="correct-answer" value="2" id="correct-2">
+                            <input type="text" id="option-2" placeholder="Option C" required>
+                            <label for="correct-2" class="correct-label">
+                                <i class="fas fa-check-circle"></i> Correct
+                            </label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="correct-answer" value="3" id="correct-3">
+                            <input type="text" id="option-3" placeholder="Option D" required>
+                            <label for="correct-3" class="correct-label">
+                                <i class="fas fa-check-circle"></i> Correct
+                            </label>
+                        </div>
+                    </div>
+                    <p class="helper-text">Select the radio button next to the correct answer</p>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeQuestionModal()">Cancel</button>
+                    <button type="submit" class="btn-submit-question">
+                        <i class="fas fa-plus-circle"></i> <span id="submit-btn-text">Add Question</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2><i class="fas fa-eye"></i> Test Preview</h2>
+                <span class="close" onclick="closePreviewModal()">&times;</span>
+            </div>
+
+            <div id="preview-content" class="preview-content">
+                <!-- Preview content will be dynamically generated -->
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="btn-cancel" onclick="closePreviewModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="create-assessment.js"></script>
+</body>
+</html>
