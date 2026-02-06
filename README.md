@@ -1,4 +1,4 @@
-# 📚 ExamPro - Online Assessment Platform
+# 📚 ExamPro - Online Assessment Website
 *(Full Stack Web Development Project)*
 
 <div align="center">
