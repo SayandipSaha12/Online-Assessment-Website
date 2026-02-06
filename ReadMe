@@ -1,236 +1,209 @@
-# 📚 ExamPro - Online Assessment Platform
+<div align="center">
 
-> **⚠️ PROJECT STATUS: PHASE 1 COMPLETED - IN ACTIVE DEVELOPMENT**
-> 
-> This project is currently in its **first phase of development**. Core functionalities (user authentication, test creation, and test taking) have been successfully implemented. Advanced features like analytics, performance tracking, and test management are planned for future releases.
+# 🎓 ExamPro - Online Assessment Platform
 
-A full-stack web application for creating, managing, and taking online MCQ assessments. Built with Spring Boot backend and vanilla JavaScript frontend.
+### Create, Share, and Manage MCQ Tests with Ease
 
-![ExamPro Banner](https://img.shields.io/badge/Status-Phase%201%20Complete-brightgreen) ![Java](https://img.shields.io/badge/Java-17-orange) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-green) ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+[![Status](https://img.shields.io/badge/Status-Phase%201%20Complete-success?style=for-the-badge)](https://github.com/yourusername/exampro)
+[![Java](https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.5-brightgreen?style=for-the-badge&logo=springboot)](https://spring.io/projects/spring-boot)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql)](https://www.mysql.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
----
+[Features](#-features) • [Installation](#-installation-guide) • [Demo](#-screenshots) • [Tech Stack](#-tech-stack) • [Documentation](#-api-documentation)
 
-## 👥 Contributors
-
-This project was developed in collaboration with:
-
-- **[Your Name](https://www.linkedin.com/in/yourprofile)** - Full Stack Development
-- **[@collaborator-name](https://www.linkedin.com/in/collaborator-profile)** - Full Stack Development
-
-*Special thanks to Claude (Anthropic AI) for technical guidance and code assistance throughout the development process.*
+</div>
 
 ---
 
-## 🎯 Project Overview
+## 📢 Project Status
 
-**ExamPro** is an online assessment system that enables educators to create custom multiple-choice question (MCQ) tests, schedule them, and share them with students. Students can take tests within a time limit and receive instant results with detailed answer reviews.
-
-### 🚀 Development Phases
-
-#### ✅ Phase 1 - COMPLETED (Current Release)
-
-The following **core functionalities** have been fully implemented and tested:
-
-##### 🔐 **Authentication System**
-- ✅ User registration with email verification
-- ✅ Secure password validation (8+ characters, uppercase, lowercase, number, special character)
-- ✅ Email verification via OTP (6-digit code sent to Gmail)
-- ✅ Professional HTML email templates with branding
-- ✅ Login/Logout functionality
-- ✅ Session management with localStorage
-
-##### 📝 **Test Creation**
-- ✅ Create custom MCQ tests with unlimited questions
-- ✅ Set test duration (in minutes)
-- ✅ Schedule test activation date and time
-- ✅ Add 4-option multiple choice questions
-- ✅ Mark correct answers for each question
-- ✅ Preview test before publishing
-- ✅ Save tests as drafts (localStorage)
-- ✅ Generate unique shareable 8-character test codes
-- ✅ Copy test code and share link functionality
-
-##### ✍️ **Test Taking**
-- ✅ Access test via unique code
-- ✅ Student information collection (name & email)
-- ✅ Timer-based test sessions with visual countdown
-- ✅ Color-coded timer warnings (orange at 5 min, red at 1 min)
-- ✅ Navigate between questions (Previous/Next buttons)
-- ✅ Review and change answers before submission
-- ✅ Auto-submit when time expires
-- ✅ Prevent duplicate test attempts (one attempt per student per test)
-- ✅ Progress indicator showing current question number
-
-##### 📊 **Results & Review**
-- ✅ Instant score calculation upon submission
-- ✅ Percentage-based performance rating
-- ✅ Detailed answer review with correct/incorrect highlighting
-- ✅ Question-by-question breakdown
-- ✅ Display student's selected answer vs correct answer
-- ✅ Performance messages based on score ranges
-- ✅ Visual feedback with color-coded results (green for correct, red for incorrect)
-
-#### 🚧 Phase 2 - PLANNED (Not Yet Implemented)
-
-> **Note:** The following features are in the planning stage and have **NOT** been implemented yet:
-
-##### 📈 **Performance Analytics** (Coming Soon)
-- [ ] Test-level analytics dashboard
-- [ ] Question difficulty analysis
-- [ ] Student engagement metrics
-- [ ] Score distribution graphs
-- [ ] Time-spent analysis per question
-
-##### 📜 **Test History** (Coming Soon)
-- [ ] View all previously taken tests
-- [ ] Access past test results
-- [ ] Filter tests by date/score/subject
-- [ ] Download test reports
-
-##### ✏️ **Edit Tests** (Coming Soon)
-- [ ] Modify existing test questions
-- [ ] Update test settings (duration, activation time)
-- [ ] Add/remove questions from published tests
-- [ ] Deactivate/reactivate tests
-
-##### 📊 **Advanced Analytics** (Coming Soon)
-- [ ] Comparative performance across multiple tests
-- [ ] Individual student performance tracking
-- [ ] Class/group performance metrics
-- [ ] Export analytics to CSV/PDF
-
-##### 👥 **Enhanced User Management** (Coming Soon)
-- [ ] User profile pages
-- [ ] Password reset functionality
-- [ ] Profile picture upload
-- [ ] Account settings
-
-##### 🎨 **Additional Features** (Coming Soon)
-- [ ] Dark mode toggle
-- [ ] Mobile app version
-- [ ] Test categories/tags
-- [ ] Search and filter tests
-- [ ] Notification system
+> **⚠️ Currently in Development - Phase 1 Completed**
+>
+> **✅ What's Working:** User Authentication, Test Creation, Test Taking, Results & Review  
+> **🚧 In Progress:** Performance Analytics, Test History, Advanced Features
 
 ---
 
-## 🎓 What Works Right Now
+## 👥 Team
 
-### ✅ You CAN currently:
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/yourusername">
+<img src="https://github.com/yourusername.png" width="100px;" alt="Your Name"/><br />
+<sub><b>Your Name</b></sub>
+</a><br />
+<sub>Full Stack Developer</sub>
+</td>
+<td align="center">
+<a href="https://github.com/collaborator">
+<img src="https://github.com/collaborator.png" width="100px;" alt="Collaborator Name"/><br />
+<sub><b>Collaborator Name</b></sub>
+</a><br />
+<sub>Full Stack Developer</sub>
+</td>
+</tr>
+</table>
 
-1. **Sign up** with email verification
-2. **Login** and access your dashboard
-3. **Create** a test with:
-   - Custom title and description
-   - Set duration (e.g., 30 minutes)
-   - Schedule activation date and time
-   - Add multiple MCQ questions with 4 options each
-   - Preview before publishing
-4. **Share** the generated test code with students
-5. **Take a test** using the test code
-6. **Submit answers** within the time limit
-7. **View results** immediately with:
-   - Your score
-   - Percentage
-   - Detailed answer breakdown
-   - Correct vs incorrect answers highlighted
-8. **Prevent retakes** - each student can only take a test once
-
-### ❌ You CANNOT currently:
-
-1. View analytics or performance graphs
-2. Edit or delete created tests
-3. View test history or past results
-4. Reset password
-5. Manage user profiles
-6. Export results to PDF/Excel
-
-**These features are planned for Phase 2 development.**
+*Special thanks to Claude (Anthropic AI) for technical guidance*
 
 ---
 
-## 🛠️ Technology Stack
+## 📖 Table of Contents
+
+- [About](#-about-the-project)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Installation Guide](#-installation-guide)
+- [Quick Start](#-quick-start)
+- [Screenshots](#-screenshots)
+- [API Documentation](#-api-documentation)
+- [Database Schema](#-database-schema)
+- [Troubleshooting](#-troubleshooting)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🚀 About The Project
+
+**ExamPro** is a full-stack web application designed to simplify the process of creating, distributing, and taking online multiple-choice assessments. Educators can create custom tests with timed questions, share them via unique codes, and students receive instant feedback with detailed answer reviews.
+
+### 🎯 Project Vision
+
+To provide an accessible, user-friendly platform for educators and students to conduct online assessments without the complexity of traditional Learning Management Systems.
+
+### ⚡ Current Status: Phase 1 - Core Features Complete
+
+| Module | Status | Description |
+|--------|--------|-------------|
+| 🔐 Authentication | ✅ **Complete** | Registration, email verification, login/logout |
+| 📝 Test Creation | ✅ **Complete** | Create MCQ tests, set duration, schedule activation |
+| ✍️ Test Taking | ✅ **Complete** | Timed tests, navigation, auto-submit |
+| 📊 Results | ✅ **Complete** | Instant scoring, detailed review |
+| 📈 Analytics | 🚧 **Planned** | Performance tracking, insights |
+| 📜 History | 🚧 **Planned** | Test archives, past results |
+| ✏️ Edit Tests | 🚧 **Planned** | Modify existing tests |
+| 👤 User Profiles | 🚧 **Planned** | Profile management, settings |
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication & Security
+
+- ✅ **Email Verification** - 6-digit OTP sent via Gmail SMTP
+- ✅ **Password Security** - BCrypt hashing + strength validation
+- ✅ **Session Management** - Secure login/logout with localStorage
+- ✅ **Professional Emails** - Branded HTML email templates
+
+### 📝 Test Creation (For Educators)
+
+- ✅ **Unlimited Questions** - Add as many MCQs as needed
+- ✅ **Scheduling** - Set activation date and time
+- ✅ **Timer Configuration** - Set duration in minutes
+- ✅ **Preview Mode** - Review before publishing
+- ✅ **Draft Saving** - Auto-save to localStorage
+- ✅ **Unique Codes** - Generate shareable 8-character codes
+- ✅ **Copy & Share** - One-click code and link copying
+
+### ✍️ Test Taking (For Students)
+
+- ✅ **Code-Based Access** - Enter test via unique code
+- ✅ **Countdown Timer** - Visual timer with color warnings
+- ✅ **Question Navigation** - Previous/Next buttons
+- ✅ **Answer Modification** - Change answers before submit
+- ✅ **Auto-Submit** - When time expires
+- ✅ **One Attempt Only** - Prevents retakes
+- ✅ **Progress Tracking** - See current question number
+
+### 📊 Results & Review
+
+- ✅ **Instant Results** - Score immediately after submission
+- ✅ **Percentage Score** - With performance rating
+- ✅ **Detailed Review** - Question-by-question breakdown
+- ✅ **Color Coding** - Green (correct), Red (incorrect)
+- ✅ **Answer Comparison** - Your answer vs. correct answer
+
+---
+
+## 🛠 Tech Stack
+
+<table>
+<tr>
+<td valign="top" width="50%">
 
 ### Backend
-- **Java 17**
-- **Spring Boot 3.2.5**
-  - Spring Web (REST APIs)
-  - Spring Data JPA (Database ORM)
-  - Spring Security (Password encryption)
-  - Spring Mail (Email service)
-- **MySQL 8.0** - Relational Database
-- **BCrypt** - Password hashing algorithm
-- **JavaMailSender** - SMTP email integration
-- **Maven** - Build and dependency management
+- **Language:** Java 17
+- **Framework:** Spring Boot 3.2.5
+- **Database:** MySQL 8.0
+- **Security:** Spring Security + BCrypt
+- **Email:** JavaMailSender (Gmail SMTP)
+- **Build Tool:** Maven
+
+**Key Dependencies:**
+```xml
+spring-boot-starter-web
+spring-boot-starter-data-jpa
+spring-boot-starter-security
+spring-boot-starter-mail
+mysql-connector-j
+```
+
+</td>
+<td valign="top" width="50%">
 
 ### Frontend
 - **HTML5** - Structure
-- **CSS3** - Custom styling (no frameworks used)
-- **Vanilla JavaScript (ES6+)** - Dynamic functionality
-- **Font Awesome 6.4.0** - Icons and UI elements
-- **LocalStorage API** - Client-side data persistence
+- **CSS3** - Styling (no frameworks)
+- **JavaScript ES6+** - Logic
+- **Font Awesome 6.4** - Icons
+- **LocalStorage API** - Client storage
 
-### Email Service
-- **Gmail SMTP Server** - For sending verification emails
-- **HTML Email Templates** - Custom branded emails
+**No frameworks used:**
+- No React/Vue/Angular
+- Pure vanilla JavaScript
+- Custom CSS (no Bootstrap/Tailwind)
 
-### Development Tools
-- **Git** - Version control
-- **GitHub** - Code hosting
-- **VS Code / IntelliJ IDEA** - Code editors
-- **MySQL Workbench** - Database management
-- **Postman** - API testing (during development)
+</td>
+</tr>
+</table>
 
 ---
 
-## 📋 Prerequisites
+## 🔧 Installation Guide
 
-Before setting up this project, ensure you have:
+### Prerequisites
 
-1. **Java Development Kit (JDK) 17 or higher**
-   - Download: https://www.oracle.com/java/technologies/downloads/
-   - Verify: `java -version` should show version 17+
+Before you begin, make sure you have these installed:
 
-2. **MySQL 8.0 or higher**
-   - Download: https://dev.mysql.com/downloads/mysql/
-   - Verify: `mysql --version` should show version 8.0+
+| Requirement | Version | Download Link | Verify Command |
+|------------|---------|---------------|----------------|
+| Java JDK | 17+ | [Download](https://www.oracle.com/java/technologies/downloads/) | `java -version` |
+| MySQL | 8.0+ | [Download](https://dev.mysql.com/downloads/mysql/) | `mysql --version` |
+| Maven | 3.6+ | [Download](https://maven.apache.org/download.cgi) | `mvn -version` |
+| Git | Latest | [Download](https://git-scm.com/downloads) | `git --version` |
+| Gmail Account | - | [Gmail](https://gmail.com) | For email verification |
 
-3. **Maven 3.6 or higher**
-   - Download: https://maven.apache.org/download.cgi
-   - Verify: `mvn -version` should show version 3.6+
-
-4. **Git**
-   - Download: https://git-scm.com/downloads
-   - Verify: `git --version`
-
-5. **Gmail Account** (for email verification)
-   - You'll need to enable 2-Step Verification
-   - Generate an App Password (instructions below)
-
-6. **IDE (Recommended)**
-   - IntelliJ IDEA Community Edition (https://www.jetbrains.com/idea/download/)
-   - OR Eclipse IDE for Java Developers
-   - OR VS Code with Java Extension Pack
-
-7. **Web Browser**
-   - Chrome, Firefox, Edge, or Safari (latest version)
+**Optional but Recommended:**
+- **IDE:** IntelliJ IDEA, Eclipse, or VS Code with Java extensions
+- **MySQL GUI:** MySQL Workbench for database management
 
 ---
 
-## 🚀 Complete Setup Guide
+## 🚀 Quick Start
 
-### Step 1: Clone the Repository
+### Step 1: Clone Repository
 ```bash
-# Clone the project
 git clone https://github.com/yourusername/exampro.git
-
-# Navigate to project directory
 cd exampro
 ```
 
-### Step 2: Database Configuration
+### Step 2: Database Setup
 
-#### 2.1 Start MySQL Server
+**Start MySQL:**
 ```bash
 # Windows
 net start MySQL80
@@ -242,464 +215,342 @@ brew services start mysql
 sudo systemctl start mysql
 ```
 
-#### 2.2 Create Database
+**Create Database:**
 ```bash
-# Login to MySQL (enter your root password when prompted)
 mysql -u root -p
-
-# Create database
+```
+```sql
 CREATE DATABASE test_platform_db;
-
-# Verify database creation
 SHOW DATABASES;
-
-# Exit MySQL
 exit;
 ```
 
-### Step 3: Gmail SMTP Setup (For Email Verification)
+### Step 3: Gmail App Password Setup
 
-#### 3.1 Enable 2-Step Verification
+> **Why needed?** Gmail requires app-specific passwords for third-party applications since 2022.
 
-1. Go to: https://myaccount.google.com/security
-2. Scroll to "Signing in to Google"
+**3.1 Enable 2-Step Verification:**
+1. Visit: https://myaccount.google.com/security
+2. Find "Signing in to Google"
 3. Click "2-Step Verification"
-4. Follow the setup process
+4. Follow setup wizard
 
-#### 3.2 Generate App Password
+**3.2 Generate App Password:**
+1. Visit: https://myaccount.google.com/apppasswords
+2. Select app: **Mail**
+3. Select device: **Other (Custom name)**
+4. Type: `ExamPro`
+5. Click **Generate**
+6. Copy the 16-character password (format: `xxxx xxxx xxxx xxxx`)
 
-1. Go to: https://myaccount.google.com/apppasswords
-2. In "Select app" dropdown → Choose "Mail"
-3. In "Select device" dropdown → Choose "Other (Custom name)"
-4. Enter name: `ExamPro`
-5. Click "Generate"
-6. Copy the 16-character password (format: `abcd efgh ijkl mnop`)
-7. **Important:** Save this password - you won't see it again!
-
-### Step 4: Configure Application Properties
+### Step 4: Configure Application
 
 Navigate to: `backend/src/main/resources/application.properties`
-
-**Update these values:**
 ```properties
-# ================= DATABASE =================
+# Database Configuration
 spring.datasource.url=jdbc:mysql://localhost:3306/test_platform_db?useSSL=false&serverTimezone=UTC
 spring.datasource.username=root
-spring.datasource.password=YOUR_MYSQL_ROOT_PASSWORD
+spring.datasource.password=YOUR_MYSQL_PASSWORD_HERE
 
-# ================= JPA / HIBERNATE =================
+# JPA Settings
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
-# ================= EMAIL (GMAIL SMTP) =================
+# Gmail SMTP Configuration
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
-spring.mail.username=your.email@gmail.com
-spring.mail.password=abcdefghijklmnop
+spring.mail.username=youremail@gmail.com
+spring.mail.password=xxxxxxxxxxxxxxxx
 
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 ```
 
 **Replace:**
-- `YOUR_MYSQL_ROOT_PASSWORD` → Your MySQL root password
-- `your.email@gmail.com` → Your Gmail address
-- `abcdefghijklmnop` → Your 16-char app password (remove spaces)
+- `YOUR_MYSQL_PASSWORD_HERE` → Your MySQL root password
+- `youremail@gmail.com` → Your Gmail address
+- `xxxxxxxxxxxxxxxx` → Your 16-char app password (remove spaces)
 
-### Step 5: Build and Run Backend
+### Step 5: Run Backend
 ```bash
-# Navigate to backend folder
 cd backend
-
-# Clean and build project
 mvn clean install
-
-# Run Spring Boot application
 mvn spring-boot:run
 ```
 
-**✅ Success indicators:**
+**✅ Success Output:**
 ```
-Started BackendApplication in X.XXX seconds (JVM running for X.XXX)
-Tomcat started on port(s): 8080 (http) with context path ''
-```
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
 
-**If you see this, backend is running successfully! ✅**
+[main] c.t.b.BackendApplication: Started BackendApplication in 3.456 seconds
+[main] o.s.b.w.embedded.tomcat.Tomcat: Tomcat started on port 8080
+```
 
 ### Step 6: Run Frontend
 
-Choose one of these methods:
+**Option A: VS Code Live Server** (Recommended)
 
-#### Option A: Live Server (Recommended for Development)
+1. Install "Live Server" extension
+2. Right-click `index.html`
+3. Select "Open with Live Server"
+4. Browser opens at `http://localhost:5500`
 
-1. Install **Live Server** extension in VS Code
-2. Open `frontend/index.html` in VS Code
-3. Right-click → Select "Open with Live Server"
-4. Frontend will run on: `http://localhost:5500`
-
-#### Option B: Python HTTP Server
+**Option B: Python HTTP Server**
 ```bash
-# Navigate to frontend folder
 cd frontend
-
-# Start server (Python 3)
 python -m http.server 5500
-
-# OR Python 2
-python -m SimpleHTTPServer 5500
 ```
 
-Frontend will run on: `http://localhost:5500`
+**Option C: Direct File**
 
-#### Option C: Direct File Access
+Simply double-click `index.html` (some features may not work due to CORS)
 
-1. Navigate to `frontend` folder
-2. Double-click `index.html`
-3. Opens in default browser
+### Step 7: Test the Application
 
-**⚠️ Note:** Some features may not work due to CORS restrictions with this method.
-
----
-
-## 📖 How to Use ExamPro
-
-### 🎓 For Educators (Creating Tests)
-
-#### 1️⃣ **Create Account**
-
-1. Open: `http://localhost:5500/index.html`
-2. Click **"Sign Up"** button
-3. Fill in:
-   - Full Name (e.g., "John Doe")
-   - Email (e.g., "john@example.com")
-   - Password (must meet requirements)
-   - Confirm Password
-4. Click **"Sign Up"**
-5. Check your email inbox for 6-digit verification code
-6. Enter the code in verification modal
-7. Click **"Verify"**
-8. Success! Now you can login
-
-#### 2️⃣ **Login**
-
-1. Click **"Login"** button
-2. Enter email and password
-3. Click **"Login"**
-4. Redirected to dashboard
-
-#### 3️⃣ **Create a Test**
-
-1. Click **"Create Assessment"** on dashboard
-2. Fill in test details:
-   - **Title**: e.g., "Mathematics Chapter 1 Quiz"
-   - **Duration**: e.g., `30` (minutes)
-   - **Activation Date**: When test becomes available
-   - **Activation Time**: Time of day
-   - **Description** (optional): Additional info
-3. Click **"Add Question"**
-4. Enter question:
-   - **Question Text**: e.g., "What is 2 + 2?"
-   - **Option A**: `3`
-   - **Option B**: `4` (select as correct)
-   - **Option C**: `5`
-   - **Option D**: `6`
-5. Select correct answer radio button
-6. Click **"Add Question"** to save
-7. Repeat for all questions (minimum 1 required)
-8. Click **"Preview Test"** to review (optional)
-9. Click **"Create Test"**
-10. **Save the Test Code** displayed (e.g., `S9JB55DK`)
-
-#### 4️⃣ **Share Test**
-
-**Option 1: Share Code**
-- Give students the 8-character code
-- Students enter it on take-assessment page
-
-**Option 2: Share Direct Link**
-- Copy the link: `http://localhost:5500/take-assessment.html?code=S9JB55DK`
-- Send via email/messaging app
+1. **Open Browser:** http://localhost:5500
+2. **Click "Sign Up"**
+3. **Enter:**
+   - Name: `Test User`
+   - Email: `your.email@gmail.com`
+   - Password: `Test1234!`
+4. **Check Email** for verification code
+5. **Verify & Login**
+6. **Create a Test!**
 
 ---
 
-### 📝 For Students (Taking Tests)
+## 📸 Screenshots
 
-#### 1️⃣ **Access Test**
+<div align="center">
 
-**Method 1: Via Code**
-1. Go to: `http://localhost:5500/take-assessment.html`
-2. Enter 8-character test code
-3. Click **"Start Test"**
+### Landing Page
+<img src="screenshots/landing.png" alt="Landing Page" width="700"/>
 
-**Method 2: Direct Link**
-1. Click link provided by instructor
-2. Test code auto-fills
-3. Click **"Start Test"**
-
-#### 2️⃣ **Enter Information**
-
-1. Review test details (title, duration, questions)
-2. Enter:
-   - Your full name
-   - Your email address
-3. Read instructions
-4. Click **"Begin Test"**
-
-#### 3️⃣ **Take the Test**
-
-1. Timer starts automatically
-2. Read question carefully
-3. Click on your chosen answer (A, B, C, or D)
-4. Click **"Next"** to move to next question
-5. Use **"Previous"** to go back and change answers
-6. Watch the timer:
-   - ⚪ Normal (white)
-   - 🟡 Warning at 5 minutes (orange)
-   - 🔴 Urgent at 1 minute (red, pulsing)
-7. On last question, **"Submit Test"** button appears
-8. Click **"Submit Test"** when ready
-
-**⚠️ Important:**
-- Test auto-submits when time expires
-- You cannot pause the timer
-- You can only take each test **once**
-
-#### 4️⃣ **View Results**
-
-1. See your score immediately:
-   - Number correct / Total questions
-   - Percentage score
-   - Performance message
-2. Scroll down for detailed review:
-   - ✅ Green highlighting = Correct answers
-   - ❌ Red highlighting = Incorrect answers
-   - See your answer vs. correct answer
-3. Click **"Go to Home"** when finished
+*Modern landing page with feature overview*
 
 ---
 
-## 📂 Project Structure
+### Create Test
+<img src="screenshots/create-test.png" alt="Create Test" width="700"/>
+
+*Intuitive test creation with preview*
+
+---
+
+### Take Test
+<img src="screenshots/take-test.png" alt="Take Test" width="700"/>
+
+*Timer-based test interface*
+
+---
+
+### Results
+<img src="screenshots/results.png" alt="Results" width="700"/>
+
+*Instant results with detailed review*
+
+</div>
+
+---
+
+## 🗂 Project Structure
 ```
 exampro/
 │
-├── backend/                          # Spring Boot Backend
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/com/testplatform/backend/
-│   │   │   │   │
-│   │   │   │   ├── controller/      # REST API Controllers
-│   │   │   │   │   ├── AuthController.java       # Authentication APIs
-│   │   │   │   │   ├── TestController.java       # Test management APIs
-│   │   │   │   │   └── QuestionController.java   # Question APIs
-│   │   │   │   │
-│   │   │   │   ├── entity/          # Database Entities (JPA)
-│   │   │   │   │   ├── User.java               # User table
-│   │   │   │   │   ├── Test.java               # Test table
-│   │   │   │   │   ├── Question.java           # Question table
-│   │   │   │   │   └── TestResult.java         # Results table
-│   │   │   │   │
-│   │   │   │   ├── repository/      # Database Repositories
-│   │   │   │   │   ├── UserRepository.java
-│   │   │   │   │   ├── TestRepository.java
-│   │   │   │   │   ├── QuestionRepository.java
-│   │   │   │   │   └── TestResultRepository.java
-│   │   │   │   │
-│   │   │   │   ├── service/         # Business Logic Services
-│   │   │   │   │   └── EmailService.java        # Email sending service
-│   │   │   │   │
-│   │   │   │   ├── dto/             # Data Transfer Objects
-│   │   │   │   │   ├── VerifyRequest.java       # OTP verification
-│   │   │   │   │   ├── CreateTestRequest.java   # Test creation
-│   │   │   │   │   ├── SubmitTestRequest.java   # Test submission
-│   │   │   │   │   └── TestResponse.java        # Test data response
-│   │   │   │   │
-│   │   │   │   ├── util/            # Utility Classes
-│   │   │   │   │   └── TestCodeGenerator.java   # Generate unique codes
-│   │   │   │   │
-│   │   │   │   ├── security/        # Security Configuration
-│   │   │   │   │   └── SecurityConfig.java      # BCrypt, CORS
-│   │   │   │   │
-│   │   │   │   └── BackendApplication.java      # Main Spring Boot class
-│   │   │   │
-│   │   │   └── resources/
-│   │   │       ├── application.properties        # App configuration
-│   │   │       └── static/                       # (empty)
+├── 📂 backend/                    # Spring Boot Backend
+│   ├── 📂 src/main/java/com/testplatform/backend/
+│   │   ├── 📂 controller/         # REST API Endpoints
+│   │   │   ├── AuthController.java
+│   │   │   ├── TestController.java
+│   │   │   └── QuestionController.java
 │   │   │
-│   │   └── test/                    # Unit tests (not implemented yet)
+│   │   ├── 📂 entity/             # Database Models
+│   │   │   ├── User.java
+│   │   │   ├── Test.java
+│   │   │   ├── Question.java
+│   │   │   └── TestResult.java
+│   │   │
+│   │   ├── 📂 repository/         # Data Access Layer
+│   │   │   ├── UserRepository.java
+│   │   │   ├── TestRepository.java
+│   │   │   ├── QuestionRepository.java
+│   │   │   └── TestResultRepository.java
+│   │   │
+│   │   ├── 📂 service/            # Business Logic
+│   │   │   └── EmailService.java
+│   │   │
+│   │   ├── 📂 dto/                # Data Transfer Objects
+│   │   │   ├── VerifyRequest.java
+│   │   │   ├── CreateTestRequest.java
+│   │   │   ├── SubmitTestRequest.java
+│   │   │   └── TestResponse.java
+│   │   │
+│   │   ├── 📂 util/               # Utilities
+│   │   │   └── TestCodeGenerator.java
+│   │   │
+│   │   ├── 📂 security/           # Security Config
+│   │   │   └── SecurityConfig.java
+│   │   │
+│   │   └── BackendApplication.java
 │   │
-│   ├── pom.xml                      # Maven dependencies
-│   └── target/                      # Compiled classes (generated)
+│   ├── 📂 src/main/resources/
+│   │   └── application.properties
+│   │
+│   └── pom.xml
 │
-├── frontend/                        # HTML/CSS/JS Frontend
+├── 📂 frontend/                   # Vanilla JS Frontend
+│   ├── index.html                 # Landing Page
+│   ├── styles.css
+│   ├── script.js
 │   │
-│   ├── index.html                   # Landing page (logged out)
-│   ├── styles.css                   # Landing page styles
-│   ├── script.js                    # Landing page scripts
+│   ├── home-logged-in.html        # Dashboard
+│   ├── home-logged-in.css
+│   ├── home-logged-in.js
 │   │
-│   ├── home-logged-in.html          # Dashboard (logged in)
-│   ├── home-logged-in.css           # Dashboard styles
-│   ├── home-logged-in.js            # Dashboard scripts
+│   ├── create-assessment.html     # Test Creation
+│   ├── create-assessment.css
+│   ├── create-assessment.js
 │   │
-│   ├── create-assessment.html       # Test creation page
-│   ├── create-assessment.css        # Test creation styles
-│   ├── create-assessment.js         # Test creation scripts
-│   │
-│   ├── take-assessment.html         # Test taking page
-│   ├── take-assessment.css          # Test taking styles
-│   └── take-assessment.js           # Test taking scripts
+│   ├── take-assessment.html       # Test Taking
+│   ├── take-assessment.css
+│   └── take-assessment.js
 │
-├── screenshots/                     # Project screenshots (for README)
-│   ├── landing.png
-│   ├── create-test.png
-│   ├── take-test.png
-│   └── results.png
-│
-├── README.md                        # This file
-├── LICENSE                          # MIT License
-└── .gitignore                       # Git ignore rules
+├── 📂 screenshots/                # README Images
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
 ## 🗄️ Database Schema
-
-### Entity Relationship Diagram
+```mermaid
+erDiagram
+    USERS ||--o{ TESTS : creates
+    USERS ||--o{ TEST_RESULTS : takes
+    TESTS ||--|{ QUESTIONS : contains
+    TESTS ||--o{ TEST_RESULTS : has
+    TEST_RESULTS ||--|{ STUDENT_ANSWERS : includes
+    
+    USERS {
+        bigint id PK
+        varchar name
+        varchar email UK
+        varchar password
+        boolean verified
+        varchar verification_code
+    }
+    
+    TESTS {
+        bigint id PK
+        varchar title
+        int duration
+        text description
+        datetime activation_date_time
+        varchar test_code UK
+        varchar created_by FK
+        datetime created_at
+        varchar status
+    }
+    
+    QUESTIONS {
+        bigint id PK
+        bigint test_id FK
+        text question_text
+        varchar option_a
+        varchar option_b
+        varchar option_c
+        varchar option_d
+        int correct_answer
+    }
+    
+    TEST_RESULTS {
+        bigint id PK
+        bigint test_id FK
+        varchar student_email
+        varchar student_name
+        int score
+        int total_questions
+        datetime submitted_at
+    }
+    
+    STUDENT_ANSWERS {
+        bigint result_id FK
+        bigint question_id
+        int selected_answer
+    }
 ```
-┌──────────────┐         ┌──────────────┐
-│    users     │         │    tests     │
-├──────────────┤         ├──────────────┤
-│ id (PK)      │         │ id (PK)      │
-│ name         │         │ title        │
-│ email        │◄────────┤ created_by   │
-│ password     │         │ duration     │
-│ verified     │         │ test_code    │
-│ verify_code  │         │ created_at   │
-└──────────────┘         └──────────────┘
-                                │
-                                │ 1:N
-                                │
-                         ┌──────▼───────┐
-                         │  questions   │
-                         ├──────────────┤
-                         │ id (PK)      │
-                         │ test_id (FK) │
-                         │ question_text│
-                         │ option_a     │
-                         │ option_b     │
-                         │ option_c     │
-                         │ option_d     │
-                         │ correct_ans  │
-                         └──────────────┘
-                                │
-                                │ 1:N
-                                │
-                         ┌──────▼───────────┐
-                         │  test_results    │
-                         ├──────────────────┤
-                         │ id (PK)          │
-                         │ test_id (FK)     │
-                         │ student_email    │
-                         │ student_name     │
-                         │ score            │
-                         │ total_questions  │
-                         │ submitted_at     │
-                         └──────────────────┘
-                                │
-                                │ 1:N
-                                │
-                         ┌──────▼──────────────┐
-                         │  student_answers    │
-                         ├─────────────────────┤
-                         │ result_id (FK)      │
-                         │ question_id         │
-                         │ selected_answer     │
-                         └─────────────────────┘
-```
 
-### Detailed Tables
+### Table Details
 
-#### 📋 `users` Table
+<details>
+<summary><b>📋 Click to view table schemas</b></summary>
+
+#### `users`
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| id | BIGINT | PRIMARY KEY, AUTO_INCREMENT | Unique user identifier |
-| name | VARCHAR(255) | NOT NULL | User's full name |
-| email | VARCHAR(255) | UNIQUE, NOT NULL | User's email address |
-| password | VARCHAR(255) | NOT NULL | BCrypt hashed password |
-| verified | BOOLEAN | DEFAULT FALSE | Email verification status |
-| verification_code | VARCHAR(6) | NULLABLE | 6-digit OTP code |
+| id | BIGINT | PK, AUTO_INCREMENT | User ID |
+| name | VARCHAR(255) | NOT NULL | Full name |
+| email | VARCHAR(255) | UNIQUE, NOT NULL | Email address |
+| password | VARCHAR(255) | NOT NULL | BCrypt hash |
+| verified | BOOLEAN | DEFAULT FALSE | Email verified? |
+| verification_code | VARCHAR(6) | NULLABLE | OTP code |
 
-**Sample Data:**
-```sql
-INSERT INTO users VALUES (1, 'John Doe', 'john@example.com', '$2a$10$...', true, NULL);
-```
-
-#### 📝 `tests` Table
+#### `tests`
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| id | BIGINT | PRIMARY KEY, AUTO_INCREMENT | Unique test identifier |
-| title | VARCHAR(255) | NOT NULL | Test title/name |
-| duration | INT | NOT NULL | Duration in minutes |
-| description | TEXT | NULLABLE | Test description |
-| activation_date_time | DATETIME | NOT NULL | When test becomes available |
-| test_code | VARCHAR(8) | UNIQUE, NOT NULL | Shareable test code |
-| created_by | VARCHAR(255) | NOT NULL | Creator's email (FK to users) |
-| created_at | DATETIME | DEFAULT CURRENT_TIMESTAMP | Creation timestamp |
-| status | VARCHAR(50) | DEFAULT 'scheduled' | Test status |
+| id | BIGINT | PK, AUTO_INCREMENT | Test ID |
+| title | VARCHAR(255) | NOT NULL | Test title |
+| duration | INT | NOT NULL | Minutes |
+| description | TEXT | NULLABLE | Description |
+| activation_date_time | DATETIME | NOT NULL | When active |
+| test_code | VARCHAR(8) | UNIQUE, NOT NULL | Share code |
+| created_by | VARCHAR(255) | FK → users.email | Creator |
+| created_at | DATETIME | DEFAULT NOW() | Created timestamp |
+| status | VARCHAR(50) | DEFAULT 'scheduled' | Status |
 
-**Sample Data:**
-```sql
-INSERT INTO tests VALUES (1, 'Math Quiz', 30, 'Chapter 1', '2026-02-10 14:00:00', 'ABC12XYZ', 'john@example.com', NOW(), 'active');
-```
-
-#### ❓ `questions` Table
+#### `questions`
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| id | BIGINT | PRIMARY KEY, AUTO_INCREMENT | Unique question identifier |
-| test_id | BIGINT | FOREIGN KEY → tests(id) | Reference to parent test |
-| question_text | TEXT | NOT NULL | The question |
+| id | BIGINT | PK, AUTO_INCREMENT | Question ID |
+| test_id | BIGINT | FK → tests.id | Parent test |
+| question_text | TEXT | NOT NULL | Question |
 | option_a | VARCHAR(500) | NOT NULL | Option A |
 | option_b | VARCHAR(500) | NOT NULL | Option B |
 | option_c | VARCHAR(500) | NOT NULL | Option C |
 | option_d | VARCHAR(500) | NOT NULL | Option D |
-| correct_answer | INT | NOT NULL (0-3) | Correct option index (0=A, 1=B, 2=C, 3=D) |
+| correct_answer | INT | NOT NULL (0-3) | Correct option |
 
-**Sample Data:**
-```sql
-INSERT INTO questions VALUES (1, 1, 'What is 2+2?', '3', '4', '5', '6', 1);
-```
-
-#### 📊 `test_results` Table
+#### `test_results`
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| id | BIGINT | PRIMARY KEY, AUTO_INCREMENT | Unique result identifier |
-| test_id | BIGINT | FOREIGN KEY → tests(id) | Reference to test taken |
-| student_email | VARCHAR(255) | NOT NULL | Student's email |
-| student_name | VARCHAR(255) | NOT NULL | Student's name |
-| score | INT | NOT NULL | Number of correct answers |
-| total_questions | INT | NOT NULL | Total questions in test |
-| submitted_at | DATETIME | DEFAULT CURRENT_TIMESTAMP | Submission time |
+| id | BIGINT | PK, AUTO_INCREMENT | Result ID |
+| test_id | BIGINT | FK → tests.id | Test taken |
+| student_email | VARCHAR(255) | NOT NULL | Student email |
+| student_name | VARCHAR(255) | NOT NULL | Student name |
+| score | INT | NOT NULL | Correct count |
+| total_questions | INT | NOT NULL | Total questions |
+| submitted_at | DATETIME | DEFAULT NOW() | Submission time |
 
-**Sample Data:**
-```sql
-INSERT INTO test_results VALUES (1, 1, 'alice@example.com', 'Alice Smith', 8, 10, NOW());
-```
-
-#### ✅ `student_answers` Table
+#### `student_answers`
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| result_id | BIGINT | FOREIGN KEY → test_results(id) | Reference to result |
+| result_id | BIGINT | FK → test_results.id | Result reference |
 | question_id | BIGINT | NOT NULL | Question ID |
-| selected_answer | INT | NOT NULL (0-3) | Selected option (0=A, 1=B, 2=C, 3=D) |
+| selected_answer | INT | NOT NULL (0-3) | Selected option |
 
-**Sample Data:**
-```sql
-INSERT INTO student_answers VALUES (1, 1, 1);  -- Answered B for question 1
-```
+</details>
 
 ---
 
-## 🔌 API Documentation
+## 📡 API Documentation
 
 ### Base URL
 ```
@@ -708,60 +559,77 @@ http://localhost:8080/api
 
 ### 🔐 Authentication Endpoints
 
-#### 1. Register User
-```http
-POST /auth/register
-Content-Type: application/json
+<details>
+<summary><b>POST /auth/register</b> - Create new user account</summary>
 
+**Request:**
+```json
 {
   "name": "John Doe",
   "email": "john@example.com",
   "password": "Password123!"
 }
-
-Response: "VERIFICATION_SENT" | "EMAIL_ALREADY_EXISTS" | "WEAK_PASSWORD"
 ```
 
-#### 2. Verify Email OTP
-```http
-POST /auth/verify
-Content-Type: application/json
+**Response:**
+```
+"VERIFICATION_SENT" | "EMAIL_ALREADY_EXISTS" | "WEAK_PASSWORD"
+```
 
+**Status Codes:**
+- `200 OK` - Registration successful
+- `400 Bad Request` - Invalid data
+
+</details>
+
+<details>
+<summary><b>POST /auth/verify</b> - Verify email with OTP</summary>
+
+**Request:**
+```json
 {
   "email": "john@example.com",
   "code": "123456"
 }
-
-Response: "VERIFIED" | "INVALID_CODE" | "USER_NOT_FOUND"
 ```
 
-#### 3. Login
-```http
-POST /auth/login
-Content-Type: application/json
+**Response:**
+```
+"VERIFIED" | "INVALID_CODE" | "USER_NOT_FOUND"
+```
 
+</details>
+
+<details>
+<summary><b>POST /auth/login</b> - User login</summary>
+
+**Request:**
+```json
 {
   "email": "john@example.com",
   "password": "Password123!"
 }
-
-Response: "LOGIN_SUCCESS" | "USER_NOT_FOUND" | "INVALID_PASSWORD" | "EMAIL_NOT_VERIFIED"
 ```
 
----
+**Response:**
+```
+"LOGIN_SUCCESS" | "USER_NOT_FOUND" | "INVALID_PASSWORD" | "EMAIL_NOT_VERIFIED"
+```
+
+</details>
 
 ### 📝 Test Management Endpoints
 
-#### 4. Create Test
-```http
-POST /tests/create
-Content-Type: application/json
+<details>
+<summary><b>POST /tests/create</b> - Create new test</summary>
 
+**Request:**
+```json
 {
-  "title": "Math Quiz",
+  "title": "Math Quiz Chapter 1",
   "duration": 30,
-  "description": "Chapter 1 Test",
-  "date": "2026-02-10",
+  "description": "Basic algebra",
+  "date": "2026-02-15",
   "time": "14:00",
   "createdBy": "john@example.com",
   "questions": [
@@ -772,8 +640,10 @@ Content-Type: application/json
     }
   ]
 }
+```
 
-Response:
+**Response:**
+```json
 {
   "status": "SUCCESS",
   "testCode": "ABC12XYZ",
@@ -782,16 +652,25 @@ Response:
 }
 ```
 
-#### 5. Get Test by Code (for taking)
-```http
-GET /tests/take/{testCode}?email={studentEmail}
+</details>
 
-Example: GET /tests/take/ABC12XYZ?email=alice@example.com
+<details>
+<summary><b>GET /tests/take/{code}</b> - Load test for taking</summary>
 
-Response:
+**Parameters:**
+- `code` - Test code (path parameter)
+- `email` - Student email (query parameter, optional)
+
+**Example:**
+```
+GET /tests/take/ABC12XYZ?email=alice@example.com
+```
+
+**Response:**
+```json
 {
   "id": 1,
-  "title": "Math Quiz",
+  "title": "Math Quiz Chapter 1",
   "duration": 30,
   "totalQuestions": 5,
   "questions": [
@@ -802,44 +681,34 @@ Response:
       "optionB": "4",
       "optionC": "5",
       "optionD": "6"
-      // Note: correctAnswer NOT included
     }
   ]
 }
 ```
 
-#### 6. Check if Already Taken
-```http
-GET /tests/check-attempt/{testCode}?email={studentEmail}
+**Note:** Correct answers are NOT included in response
 
-Example: GET /tests/check-attempt/ABC12XYZ?email=alice@example.com
+</details>
 
-Response:
-{
-  "alreadyTaken": true,
-  "score": 8,
-  "totalQuestions": 10,
-  "submittedAt": "2026-02-06T14:30:00"
-}
-```
+<details>
+<summary><b>POST /tests/submit</b> - Submit test answers</summary>
 
-#### 7. Submit Test
-```http
-POST /tests/submit
-Content-Type: application/json
-
+**Request:**
+```json
 {
   "testCode": "ABC12XYZ",
   "studentEmail": "alice@example.com",
   "studentName": "Alice Smith",
   "answers": {
-    "1": 1,    // Question ID 1 → Selected B (index 1)
-    "2": 2,    // Question ID 2 → Selected C (index 2)
-    "3": 0     // Question ID 3 → Selected A (index 0)
+    "1": 1,
+    "2": 2,
+    "3": 0
   }
 }
+```
 
-Response:
+**Response:**
+```json
 {
   "score": 8,
   "totalQuestions": 10,
@@ -857,384 +726,220 @@ Response:
 }
 ```
 
-#### 8. Get My Created Tests
-```http
-GET /tests/my-tests?email={creatorEmail}
+</details>
 
-Example: GET /tests/my-tests?email=john@example.com
+<details>
+<summary><b>GET /tests/check-attempt/{code}</b> - Check if student already took test</summary>
 
-Response: [
-  {
-    "id": 1,
-    "title": "Math Quiz",
-    "testCode": "ABC12XYZ",
-    "duration": 30,
-    "createdAt": "2026-02-06T10:00:00",
-    "status": "active"
-  }
-]
+**Example:**
+```
+GET /tests/check-attempt/ABC12XYZ?email=alice@example.com
 ```
 
+**Response (if taken):**
+```json
+{
+  "alreadyTaken": true,
+  "score": 8,
+  "totalQuestions": 10,
+  "submittedAt": "2026-02-06T14:30:00"
+}
+```
+
+**Response (if not taken):**
+```json
+{
+  "alreadyTaken": false
+}
+```
+
+</details>
+
 ---
 
-## 🐛 Troubleshooting Guide
+## 🐛 Troubleshooting
 
-### ❌ Backend Won't Start
+<details>
+<summary><b>❌ Backend Issues</b></summary>
 
-#### Problem: `java.sql.SQLException: Access denied for user 'root'@'localhost'`
-**Cause:** Wrong MySQL password in `application.properties`
+### Problem: `Port 8080 already in use`
 
-**Solution:**
-1. Open `application.properties`
-2. Check `spring.datasource.password`
-3. Verify it matches your MySQL root password
-4. Restart backend
-
----
-
-#### Problem: `Port 8080 already in use`
-**Cause:** Another application is using port 8080
-
-**Solution (Windows):**
+**Windows:**
 ```bash
-# Find process using port 8080
 netstat -ano | findstr :8080
-
-# Kill the process (replace <PID> with actual number)
 taskkill /PID <PID> /F
 ```
 
-**Solution (macOS/Linux):**
+**macOS/Linux:**
 ```bash
-# Find and kill process
 lsof -ti:8080 | xargs kill -9
 ```
 
----
-
-#### Problem: `Table 'test_platform_db.users' doesn't exist`
-**Cause:** Database tables not created
+### Problem: `Access denied for user 'root'@'localhost'`
 
 **Solution:**
-1. Check `application.properties`:
-```properties
-   spring.jpa.hibernate.ddl-auto=update
-```
-2. Restart Spring Boot - tables auto-create
-3. OR manually run SQL:
-```sql
-   USE test_platform_db;
-   SHOW TABLES;
+1. Check `application.properties`
+2. Verify `spring.datasource.password` matches MySQL password
+3. Test MySQL connection:
+```bash
+   mysql -u root -p
 ```
 
----
-
-### ❌ Email Not Sending
-
-#### Problem: Verification email not received
-**Cause:** Wrong Gmail app password or 2-step verification not enabled
+### Problem: Email not sending
 
 **Solution:**
-1. Verify 2-Step Verification is ON: https://myaccount.google.com/security
-2. Generate new app password: https://myaccount.google.com/apppasswords
-3. Update `application.properties`:
-```properties
-   spring.mail.username=your.actual.email@gmail.com
-   spring.mail.password=your16charapppwd
-```
-   (Remove all spaces from app password)
-4. Restart backend
-5. Check Spring Boot console for detailed error
+1. Verify 2-Step Verification enabled
+2. Generate new app password
+3. Remove spaces from app password in config
+4. Check Spring Boot console for SMTP errors
 
----
+</details>
 
-### ❌ Frontend Issues
+<details>
+<summary><b>❌ Frontend Issues</b></summary>
 
-#### Problem: CORS error in browser console
-**Cause:** Backend not allowing frontend origin
+### Problem: CORS error
 
 **Solution:**
-Ensure `TestController.java` and `AuthController.java` have:
+Ensure all controllers have:
 ```java
 @CrossOrigin(origins = "*")
 ```
 
----
-
-#### Problem: Login modal not opening when clicking buttons
-**Cause:** localStorage still has logged-in user
+### Problem: Login modal not opening
 
 **Solution:**
-1. Open browser console (F12)
-2. Type: `localStorage.clear()`
-3. Press Enter
-4. Reload page (Ctrl + F5)
+```javascript
+// Open browser console (F12)
+localStorage.clear()
+// Reload page (Ctrl + F5)
+```
 
----
-
-#### Problem: "Test Already Taken" modal not styled
-**Cause:** CSS file not loaded or cached
+### Problem: Test code not working
 
 **Solution:**
-1. Clear browser cache (Ctrl + Shift + Delete)
-2. Select "Cached images and files"
-3. Clear data
-4. Reload page (Ctrl + F5)
-
----
-
-#### Problem: Can't connect to backend
-**Cause:** Backend not running or wrong URL
-
-**Solution:**
-1. Check Spring Boot console - should show "Tomcat started on port 8080"
-2. Open: http://localhost:8080/api/tests/my-tests?email=test@test.com
-3. Should see `[]` (empty array) or error message
-4. If connection refused → Backend not running
-
----
-
-### ❌ Test Taking Issues
-
-#### Problem: Timer not starting
-**Cause:** JavaScript error
-
-**Solution:**
-1. Open console (F12)
-2. Check for red errors
-3. Refresh page
-4. If persists, check `take-assessment.js` line 300-330
-
----
-
-#### Problem: Questions not loading
-**Cause:** Test code invalid or test not found
-
-**Solution:**
-1. Verify test code is correct (case-sensitive)
-2. Check backend console for errors
-3. Verify test exists in database:
+1. Code is case-sensitive
+2. Check database:
 ```sql
    SELECT * FROM tests WHERE test_code = 'YOUR_CODE';
 ```
 
+</details>
+
 ---
 
-## 🔒 Security Considerations
+## 🛣 Roadmap
 
-### ✅ Currently Implemented
+### ✅ Phase 1 - COMPLETED (February 2026)
 
-- ✅ **Password Hashing**: BCrypt with salt (60-character hash)
-- ✅ **Email Verification**: OTP before account activation
-- ✅ **Strong Passwords**: Enforced (8+ chars, upper, lower, number, special)
-- ✅ **SQL Injection Prevention**: JPA/Hibernate parameterized queries
-- ✅ **One-Time Test Attempts**: Prevents retakes
-- ✅ **CORS Enabled**: Cross-origin requests allowed for development
+- [x] User authentication with email verification
+- [x] Test creation with scheduling
+- [x] Test taking with timer
+- [x] Instant results and review
+- [x] Prevent duplicate attempts
 
-### ⚠️ Production Security TODO
+### 🚧 Phase 2 - IN PROGRESS (Q2 2026)
 
-> **Warning:** This is a development build. For production deployment, implement:
+- [ ] Performance analytics dashboard
+- [ ] Test history and archives
+- [ ] Edit existing tests
+- [ ] User profile management
+- [ ] Password reset functionality
 
-- [ ] **HTTPS/TLS**: Encrypt all traffic
-- [ ] **JWT Authentication**: Replace localStorage with secure tokens
-- [ ] **Rate Limiting**: Prevent brute-force attacks
-- [ ] **CSRF Protection**: Enable for state-changing operations
-- [ ] **Environment Variables**: Move secrets out of `application.properties`
-- [ ] **Input Sanitization**: Prevent XSS attacks
-- [ ] **Session Timeout**: Auto-logout after inactivity
-- [ ] **Audit Logging**: Track all sensitive operations
-- [ ] **Password Reset**: Implement forgot password flow
-- [ ] **Email Verification Expiry**: OTP codes should expire (currently don't)
+### 🔮 Phase 3 - PLANNED (Q3 2026)
+
+- [ ] Different question types
+- [ ] Test categories and tags
+- [ ] Export to PDF/Excel
+- [ ] Dark mode
+- [ ] Mobile responsive improvements
+
+### 🌟 Phase 4 - FUTURE
+
+- [ ] Mobile app
+- [ ] AI question generation
+- [ ] Real-time monitoring
+- [ ] LMS integration
 
 ---
 
 ## 🤝 Contributing
 
-This project is currently in **Phase 1 development**. We welcome contributions, especially for Phase 2 features!
-
-### How to Contribute
+We welcome contributions! Here's how:
 
 1. **Fork** the repository
-2. **Create a feature branch**
-```bash
-   git checkout -b feature/YourFeature
-```
-3. **Make your changes**
-   - Follow existing code style
-   - Add comments where necessary
-   - Test thoroughly
-4. **Commit** with clear message
-```bash
-   git commit -m "Add: Implemented password reset feature"
-```
-5. **Push** to your fork
-```bash
-   git push origin feature/YourFeature
-```
-6. **Open a Pull Request**
-   - Describe what you changed
-   - Reference any related issues
-   - Include screenshots if UI changes
+2. **Create** feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** changes (`git commit -m 'Add: Amazing Feature'`)
+4. **Push** to branch (`git push origin feature/AmazingFeature`)
+5. **Open** Pull Request
 
 ### Contribution Guidelines
 
-- ✅ Write clean, readable code
-- ✅ Follow Java naming conventions (camelCase for methods, PascalCase for classes)
-- ✅ Add JavaDoc comments for public methods
-- ✅ Test your changes before submitting
-- ✅ Update README if adding new features
-- ❌ Don't commit `application.properties` with real credentials
-- ❌ Don't push `target/` or `node_modules/` folders
+✅ **DO:**
+- Write clean, readable code
+- Add comments where necessary
+- Test thoroughly before submitting
+- Follow existing code style
+
+❌ **DON'T:**
+- Commit sensitive data (passwords, keys)
+- Push `target/` or build folders
+- Make breaking changes without discussion
 
 ---
 
-## 📝 License
+## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-**TL;DR of MIT License:**
-- ✅ Free to use commercially
-- ✅ Free to modify
-- ✅ Free to distribute
-- ✅ Free to use privately
-- ✅ Can sublicense
-- ⚠️ No warranty provided
-- ⚠️ License and copyright notice must be included
+This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for details.
+```
+MIT License - TL;DR
+✅ Commercial use allowed
+✅ Modification allowed
+✅ Distribution allowed
+✅ Private use allowed
+⚠️ No warranty provided
+⚠️ License must be included
+```
 
 ---
 
-## 👨‍💻 Project Team
+## 📞 Contact
 
-**Developed by:**
+<div align="center">
 
-- **[Your Name](https://www.linkedin.com/in/yourprofile)** 
-  - Role: Full Stack Development
-  - Email: your.email@gmail.com
-  - GitHub: [@yourusername](https://github.com/yourusername)
+### Connect With Us
 
-- **[@Collaborator Name](https://www.linkedin.com/in/collaborator-profile)**
-  - Role: Full Stack Development  
-  - Email: collaborator.email@gmail.com
-  - GitHub: [@collaboratorusername](https://github.com/collaboratorusername)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yourprofile)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@gmail.com)
 
-**Special Thanks:**
-- Claude (Anthropic AI) for technical guidance and code assistance
+### Found a Bug?
+
+[Report Issue](https://github.com/yourusername/exampro/issues/new) • [Request Feature](https://github.com/yourusername/exampro/issues/new?labels=enhancement)
+
+</div>
 
 ---
 
 ## 🙏 Acknowledgments
 
-- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
-- [MySQL Documentation](https://dev.mysql.com/doc/)
-- [Font Awesome](https://fontawesome.com/) for icons
-- [Stack Overflow](https://stackoverflow.com/) community
-- [Baeldung](https://www.baeldung.com/) for Spring Boot tutorials
-- [MDN Web Docs](https://developer.mozilla.org/) for JavaScript reference
+- [Spring Boot](https://spring.io/projects/spring-boot) - Backend framework
+- [MySQL](https://www.mysql.com/) - Database
+- [Font Awesome](https://fontawesome.com/) - Icons
+- [Stack Overflow](https://stackoverflow.com/) - Community support
+- [Baeldung](https://www.baeldung.com/) - Spring tutorials
 
 ---
 
-## 📸 Screenshots
+<div align="center">
 
-### 🏠 Landing Page
-![Landing Page](screenshots/landing.png)
-*Clean, modern landing page with feature overview*
-
-### 📝 Create Assessment
-![Create Test](screenshots/create-test.png)
-*Intuitive test creation interface with live preview*
-
-### ✍️ Take Assessment
-![Take Test](screenshots/take-test.png)
-*Timer-based test interface with progress indicator*
-
-### 📊 Test Results
-![Results](screenshots/results.png)
-*Instant results with detailed answer review*
-
----
-
-## 🎯 Project Roadmap
-
-### ✅ Phase 1 - COMPLETED (Feb 2026)
-- [x] User authentication system
-- [x] Email verification
-- [x] Test creation functionality
-- [x] Test taking functionality
-- [x] Results and review system
-- [x] Duplicate attempt prevention
-
-### 🚧 Phase 2 - IN PLANNING (Q2 2026)
-- [ ] Performance analytics dashboard
-- [ ] Test history and archives
-- [ ] Edit existing tests
-- [ ] Advanced student analytics
-- [ ] User profile management
-- [ ] Password reset functionality
-
-### 🔮 Phase 3 - FUTURE (Q3 2026)
-- [ ] Different question types (True/False, Fill-in-blank)
-- [ ] Test categories and tags
-- [ ] Export results to PDF/Excel
-- [ ] Mobile responsive design improvements
-- [ ] Dark mode
-- [ ] Notification system
-
-### 🌟 Phase 4 - LONG TERM
-- [ ] Mobile app (Android/iOS)
-- [ ] AI-powered question generation
-- [ ] Plagiarism detection
-- [ ] Real-time proctoring
-- [ ] Integration with LMS platforms
-- [ ] Multi-language support
-
----
-
-## 📞 Contact & Support
-
-### Have Questions?
-
-- 📧 **Email:** your.email@gmail.com
-- 💼 **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
-- 🐙 **GitHub Issues:** [Report a Bug](https://github.com/yourusername/exampro/issues)
-
-### Found a Bug?
-
-Please [open an issue](https://github.com/yourusername/exampro/issues/new) with:
-1. **Title**: Brief description
-2. **Steps to reproduce**
-3. **Expected vs actual behavior**
-4. **Screenshots** (if applicable)
-5. **Environment** (OS, browser, Java version)
-
----
-
-## ⭐ Show Your Support
-
-If you found this project helpful or interesting:
-
-- ⭐ **Star** this repository
-- 🍴 **Fork** and contribute
-- 📢 **Share** with others
-- 💬 **Provide feedback**
-
----
-
-## 📊 Project Stats
-
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/exampro)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/exampro)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/exampro)
-![GitHub](https://img.shields.io/github/license/yourusername/exampro)
-
----
+### ⭐ Star this repo if you found it helpful!
 
 **Made with ❤️ by [Your Team Name]**
 
-*Last Updated: February 6, 2026*
-*Current Version: 1.0.0 (Phase 1)*
+*Last Updated: February 6, 2026 | Version 1.0.0 (Phase 1)*
 
----
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/exampro?style=social)](https://github.com/yourusername/exampro/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yourusername/exampro?style=social)](https://github.com/yourusername/exampro/network/members)
 
-## 🔖 Keywords
-
-`online-assessment` `testing-platform` `mcq-test` `spring-boot` `java` `mysql` `javascript` `education-technology` `e-learning` `quiz-app` `exam-platform` `full-stack` `rest-api` `email-verification` `student-assessment`
+</div>
