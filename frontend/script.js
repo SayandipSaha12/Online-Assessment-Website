@@ -63,7 +63,7 @@ async function handleLogin(event) {
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
 
     try {
-        const response = await fetch('https://your-backend-url.up.railway.app', {
+        const response = await fetch('https://your-backend-url.up.railway.app/api/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
@@ -148,7 +148,7 @@ async function handleSignup(event) {
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
     try {
-        const response = await fetch('https://your-backend-url.up.railway.app', {
+        const response = await fetch('https://your-backend-url.up.railway.app/api/auth/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, password })
@@ -209,7 +209,7 @@ async function verifyOtp(event) {
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
 
     try {
-        const response = await fetch('https://your-backend-url.up.railway.app', {
+        const response = await fetch('https://your-backend-url.up.railway.app/api/auth/verify', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, code })
@@ -257,7 +257,7 @@ async function resendOtp() {
         alert('A new verification code has been sent to your email.');
         
         // When backend endpoint is ready:
-        // const response = await fetch('http://localhost:8080/api/auth/resend-otp', {
+        // const response = await fetch('https://your-backend-url.up.railway.app/api/auth/resend-otp', {
         //     method: 'POST',
         //     headers: { 'Content-Type': 'application/json' },
         //     body: JSON.stringify({ email })
@@ -270,13 +270,10 @@ async function resendOtp() {
 }
 
 // ================= NAVIGATION =================
-
-// ================= NAVIGATION =================
-// ================= NAVIGATION =================
 function navigateToCreate() {
     if (!isLoggedIn()) {
         openLoginModal();
-        return; // ✅ STOP HERE - Don't navigate
+        return;
     }
     window.location.href = 'create-assessment.html';
 }
@@ -284,7 +281,7 @@ function navigateToCreate() {
 function navigateToTake() {
     if (!isLoggedIn()) {
         openLoginModal();
-        return; // ✅ STOP HERE - Don't navigate
+        return;
     }
     window.location.href = 'take-assessment.html';
 }
@@ -292,34 +289,35 @@ function navigateToTake() {
 function navigateToPerformance() {
     if (!isLoggedIn()) {
         openLoginModal();
-        return; // ✅ STOP HERE - Don't navigate
+        return;
     }
-    window.location.href = 'performance.html';
+    alert('Performance page coming soon!');
 }
 
 function navigateToPrevious() {
     if (!isLoggedIn()) {
         openLoginModal();
-        return; // ✅ STOP HERE - Don't navigate
+        return;
     }
-    window.location.href = 'previous-tests.html';
+    alert('Previous tests page coming soon!');
 }
 
 function navigateToEdit() {
     if (!isLoggedIn()) {
         openLoginModal();
-        return; // ✅ STOP HERE - Don't navigate
+        return;
     }
-    window.location.href = 'edit-tests.html';
+    alert('Edit tests page coming soon!');
 }
 
 function navigateToAnalytics() {
     if (!isLoggedIn()) {
         openLoginModal();
-        return; // ✅ STOP HERE - Don't navigate
+        return;
     }
-    window.location.href = 'analytics.html';
+    alert('Analytics page coming soon!');
 }
+
 // ================= LOGOUT =================
 function logout() {
     if (confirm('Are you sure you want to logout?')) {
