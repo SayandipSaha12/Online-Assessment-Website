@@ -11,16 +11,19 @@ function checkLoginStatus() {
     const userName = localStorage.getItem('loggedInUserName');
     
     if (loggedInUser) {
-        document.getElementById('user-info').style.display = 'flex';
-        document.getElementById('btn-logout').style.display = 'flex';
-        document.getElementById('user-name').textContent = userName || loggedInUser.split('@')[0];
+        const userInfoEl = document.getElementById('user-info');
+        const logoutBtn = document.getElementById('btn-logout');
+        const userNameEl = document.getElementById('user-name');
+        
+        if (userInfoEl) userInfoEl.style.display = 'flex';
+        if (logoutBtn) logoutBtn.style.display = 'flex';
+        if (userNameEl) userNameEl.textContent = userName || loggedInUser.split('@')[0];
     }
 }
 
 // Logout function
 function handleLogout() {
     if (timerInterval) {
-        // Test is in progress
         if (!confirm('Are you sure you want to logout? Your test progress will be lost.')) {
             return;
         }
@@ -41,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (codeFromUrl) {
         document.getElementById('test-code-input').value = codeFromUrl;
-        // Auto-load test if code is in URL
         setTimeout(() => {
             loadTest(new Event('submit'));
         }, 500);
@@ -59,14 +61,12 @@ async function loadTest(event) {
         return;
     }
 
-    // Check if user is logged in
     const loggedInUser = localStorage.getItem('loggedInUser');
     
-    // If logged in, check if they already took this test
     if (loggedInUser) {
         try {
             const checkResponse = await fetch(
-                `http://localhost:8080/api/tests/check-attempt/${testCode}?email=${loggedInUser}`
+                `https://your-backend-url.up.railway.app/api/tests/check-attempt/${testCode}?email=${loggedInUser}`
             );
             
             if (checkResponse.ok) {
@@ -83,8 +83,7 @@ async function loadTest(event) {
     }
 
     try {
-        // Build URL with email if logged in
-        let url = `http://localhost:8080/api/tests/take/${testCode}`;
+        let url = `https://your-backend-url.up.railway.app/api/tests/take/${testCode}`;
         if (loggedInUser) {
             url += `?email=${loggedInUser}`;
         }
@@ -113,11 +112,9 @@ async function loadTest(event) {
         testData = await response.json();
         console.log('Test loaded:', testData);
 
-        // Show student info section
         document.getElementById('enter-code-section').style.display = 'none';
         document.getElementById('student-info-section').style.display = 'flex';
         
-        // Update test details
         document.getElementById('test-title').textContent = testData.title;
         
         const testDetailsHTML = `
@@ -143,7 +140,6 @@ async function loadTest(event) {
         
         document.getElementById('test-details').innerHTML = testDetailsHTML;
 
-        // Auto-fill student info if logged in
         const userName = localStorage.getItem('loggedInUserName');
         
         if (loggedInUser) {
@@ -152,7 +148,6 @@ async function loadTest(event) {
                 document.getElementById('student-name').value = userName;
             }
             
-            // Make email field readonly for logged-in users
             document.getElementById('student-email').setAttribute('readonly', true);
             document.getElementById('student-email').style.backgroundColor = '#f3f4f6';
         }
@@ -168,7 +163,6 @@ function showAlreadyTakenModal(data) {
     const percentage = (data.score / data.totalQuestions * 100).toFixed(1);
     const submittedDate = new Date(data.submittedAt).toLocaleString();
     
-    // Remove any existing modal first
     const existingModal = document.getElementById('alreadyTakenModal');
     if (existingModal) {
         existingModal.remove();
@@ -216,18 +210,14 @@ function showAlreadyTakenModal(data) {
     `;
     
     document.body.appendChild(modal);
-    
-    // Prevent scrolling on body when modal is open
     document.body.style.overflow = 'hidden';
 }
 
-// Close already taken modal
 function closeAlreadyTakenModal() {
     const modal = document.getElementById('alreadyTakenModal');
     if (modal) {
         modal.remove();
     }
-    // Restore scrolling
     document.body.style.overflow = 'auto';
     window.location.href = 'index.html';
 }
@@ -244,27 +234,22 @@ function startTest(event) {
         return;
     }
 
-    // Store student info
     testData.studentName = studentName;
     testData.studentEmail = studentEmail;
 
-    // Hide student info, show test
     document.getElementById('student-info-section').style.display = 'none';
     document.getElementById('test-section').style.display = 'block';
     
-    // Show timer
     const timerContainer = document.getElementById('timer-container');
     if (timerContainer) {
         timerContainer.style.display = 'flex';
     }
     
-    // Hide user info if it exists (to save space during test)
     const userInfo = document.getElementById('user-info');
     if (userInfo) {
         userInfo.style.display = 'none';
     }
     
-    // Initialize test
     document.getElementById('total-questions').textContent = testData.questions.length;
     currentQuestionIndex = 0;
     studentAnswers = {};
@@ -295,11 +280,9 @@ function renderQuestion() {
     
     document.getElementById('questions-container').innerHTML = questionHTML;
     
-    // Update progress
     const progress = ((currentQuestionIndex + 1) / testData.questions.length) * 100;
     document.getElementById('progress-fill').style.width = progress + '%';
     
-    // Update navigation buttons
     document.getElementById('btn-previous').disabled = currentQuestionIndex === 0;
     
     const isLastQuestion = currentQuestionIndex === testData.questions.length - 1;
@@ -307,7 +290,6 @@ function renderQuestion() {
     document.getElementById('btn-submit').style.display = isLastQuestion ? 'flex' : 'none';
 }
 
-// Render single option
 function renderOption(questionId, optionIndex, label, text) {
     const isSelected = studentAnswers[questionId] === optionIndex;
     return `
@@ -319,13 +301,11 @@ function renderOption(questionId, optionIndex, label, text) {
     `;
 }
 
-// Select answer
 function selectAnswer(questionId, optionIndex) {
     studentAnswers[questionId] = optionIndex;
     renderQuestion();
 }
 
-// Navigation
 function previousQuestion() {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
@@ -342,7 +322,7 @@ function nextQuestion() {
 
 // Timer
 function startTimer() {
-    timeRemaining = testData.duration * 60; // Convert minutes to seconds
+    timeRemaining = testData.duration * 60;
     
     timerInterval = setInterval(() => {
         timeRemaining--;
@@ -355,18 +335,15 @@ function startTimer() {
         
         const timerContainer = document.getElementById('timer-container');
         
-        // Warning at 5 minutes
         if (timeRemaining === 300) {
             timerContainer.classList.add('warning');
         }
         
-        // Danger at 1 minute
         if (timeRemaining === 60) {
             timerContainer.classList.remove('warning');
             timerContainer.classList.add('danger');
         }
         
-        // Time's up
         if (timeRemaining <= 0) {
             clearInterval(timerInterval);
             alert('Time is up! Submitting your test...');
@@ -377,7 +354,6 @@ function startTimer() {
 
 // Submit test
 async function submitTest() {
-    // Check if all questions are answered
     const unansweredCount = testData.questions.length - Object.keys(studentAnswers).length;
     
     if (unansweredCount > 0) {
@@ -386,7 +362,6 @@ async function submitTest() {
         }
     }
 
-    // Stop timer
     if (timerInterval) {
         clearInterval(timerInterval);
     }
@@ -399,7 +374,7 @@ async function submitTest() {
     };
 
     try {
-        const response = await fetch('http://localhost:8080/api/tests/submit', {
+        const response = await fetch('https://your-backend-url.up.railway.app/api/tests/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(submitData)
@@ -412,7 +387,6 @@ async function submitTest() {
         const results = await response.json();
         console.log('Results:', results);
 
-        // Show results
         showResults(results);
 
     } catch (error) {
@@ -437,12 +411,10 @@ function showResults(results) {
         userInfo.style.display = 'flex';
     }
 
-    // Update score display
     document.getElementById('score-display').textContent = results.score;
     document.getElementById('total-score').textContent = results.totalQuestions;
     document.getElementById('percentage-display').textContent = results.percentage.toFixed(1) + '%';
 
-    // Score message
     const percentage = results.percentage;
     let message = '';
     let iconClass = 'fas fa-trophy';
@@ -463,7 +435,6 @@ function showResults(results) {
     document.getElementById('score-message').textContent = message;
     document.querySelector('.score-icon i').className = iconClass;
 
-    // Render answer review
     let answersHTML = '';
     
     testData.questions.forEach((question, index) => {
