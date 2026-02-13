@@ -120,4 +120,4 @@ document.querySelector('.logo').addEventListener('click', function () {
 
 In **ALL 3 files above**, replace:
 ```
-https://your-backend-url.up.railway.app
+https://online-assessment-website-production.up.railway.app.railway.app
