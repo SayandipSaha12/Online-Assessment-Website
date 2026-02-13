@@ -286,7 +286,6 @@ function getTestData() {
 }
 
 // Create Test
-// Create Test
 async function createTest() {
     // Validate all required fields
     const testData = getTestData();
@@ -327,7 +326,7 @@ async function createTest() {
     console.log('📤 Sending to backend:', requestData);
 
     try {
-        const response = await fetch('http://localhost:8080/api/tests/create', {
+        const response = await fetch('https://your-backend-url.up.railway.app/api/tests/create', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'
@@ -359,7 +358,7 @@ async function createTest() {
 
     } catch (error) {
         console.error('❌ Network error:', error);
-        alert('Server error: ' + error.message + '\n\nMake sure Spring Boot is running on port 8080');
+        alert('Server error: ' + error.message + '\n\nMake sure backend is running');
     }
 }
 
@@ -481,15 +480,9 @@ function goToHome() {
     window.location.href = 'home-logged-in.html';
 }
 
-// Generate random test ID (temporary, backend should do this)
-function generateTestId() {
-    return Math.random().toString(36).substring(2, 15);
-}
-
 // Logout
 function handleLogout() {
     if (confirm('Are you sure you want to logout? Any unsaved changes will be lost.')) {
-        // Clear any session data
         localStorage.removeItem('testDraft');
         window.location.href = 'index.html';
     }
@@ -497,7 +490,6 @@ function handleLogout() {
 
 // Show notification
 function showNotification(message, type = 'success') {
-    // Create notification element
     const notification = document.createElement('div');
     notification.style.cssText = `
         position: fixed;
@@ -514,25 +506,17 @@ function showNotification(message, type = 'success') {
     `;
     notification.textContent = message;
     
-    // Add animation
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {
-            from {
-                transform: translateX(400px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
     `;
     document.head.appendChild(style);
     
     document.body.appendChild(notification);
     
-    // Remove after 3 seconds
     setTimeout(() => {
         notification.style.animation = 'slideIn 0.3s ease reverse';
         setTimeout(() => notification.remove(), 300);
