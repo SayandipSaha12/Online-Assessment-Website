@@ -7,17 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
 // Load user data from localStorage
 function loadUserData() {
     const fullName = localStorage.getItem('loggedInUserName');
-
-    // Safety check: if user not logged in
+    
     if (!fullName) {
         window.location.href = 'index.html';
         return;
     }
-
-    // Update navbar with full name
+    
     document.getElementById('user-name').textContent = fullName;
-
-    // Extract and show first name only
+    
     const firstName = fullName.split(' ')[0];
     document.getElementById('welcome-name').textContent = firstName;
 }
@@ -32,19 +29,19 @@ function navigateToTake() {
 }
 
 function navigateToPerformance() {
-    window.location.href = 'performance.html';
+    alert('Performance page coming soon!');
 }
 
 function navigateToPrevious() {
-    window.location.href = 'previous-tests.html';
+    alert('Previous tests page coming soon!');
 }
 
 function navigateToEdit() {
-    window.location.href = 'edit-tests.html';
+    alert('Edit tests page coming soon!');
 }
 
 function navigateToAnalytics() {
-    window.location.href = 'analytics.html';
+    alert('Analytics page coming soon!');
 }
 
 // ================= LOGOUT =================
@@ -52,9 +49,7 @@ function handleLogout() {
     if (confirm('Are you sure you want to logout?')) {
         localStorage.clear();
         sessionStorage.clear();
-
         showNotification('Logged out successfully!');
-
         setTimeout(() => {
             window.location.href = 'index.html';
         }, 1000);
@@ -74,7 +69,7 @@ function initializeAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
+    
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -83,9 +78,8 @@ function initializeAnimations() {
             }
         });
     }, observerOptions);
-
+    
     const animatedElements = document.querySelectorAll('.feature-card, .step');
-
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -110,9 +104,7 @@ function showNotification(message, type = 'success') {
         font-weight: 600;
     `;
     notification.textContent = message;
-
     document.body.appendChild(notification);
-
     setTimeout(() => notification.remove(), 3000);
 }
 
@@ -120,3 +112,12 @@ function showNotification(message, type = 'success') {
 document.querySelector('.logo').addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+```
+
+---
+
+## ⚠️ **CRITICAL: Replace Backend URL**
+
+In **ALL 3 files above**, replace:
+```
+https://your-backend-url.up.railway.app
