@@ -326,7 +326,7 @@ async function createTest() {
     console.log('📤 Sending to backend:', requestData);
 
     try {
-        const response = await fetch('https://your-backend-url.up.railway.app/api/tests/create', {
+        const response = await fetch('https://online-assessment-website-production.up.railway.app/api/tests/create', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'
