@@ -63,7 +63,7 @@ async function handleLogin(event) {
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
 
     try {
-        const response = await fetch('https://your-backend-url.up.railway.app/api/auth/login', {
+        const response = await fetch('https://online-assessment-website-production.up.railway.app/api/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
@@ -148,7 +148,7 @@ async function handleSignup(event) {
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
     try {
-        const response = await fetch('https://your-backend-url.up.railway.app/api/auth/register', {
+        const response = await fetch('https://online-assessment-website-production.up.railway.app/api/auth/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, password })
@@ -209,7 +209,7 @@ async function verifyOtp(event) {
     submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
 
     try {
-        const response = await fetch('https://your-backend-url.up.railway.app/api/auth/verify', {
+        const response = await fetch('https://online-assessment-website-production.up.railway.app/api/auth/verify', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, code })
